@@ -1,7 +1,7 @@
 import React from "react";
 
 const Button = () => {
-  return <button>Dont click me!</button>;
+  return <button data-testid="button">0</button>;
 };
 
 export default Button;
