@@ -1,7 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Button = () => {
-  return <button data-testid="button">0</button>;
+  const [count, setCount] = useState(0);
+
+  const countClickHandler = () => setCount((count) => count + 1);
+
+  return (
+    <button data-testid="button" onClick={countClickHandler}>
+      {count}
+    </button>
+  );
 };
 
 export default Button;
