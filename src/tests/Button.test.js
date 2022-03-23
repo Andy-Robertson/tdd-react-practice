@@ -1,5 +1,6 @@
 import Button from "../Components/Button";
-import { render, screen, fireEvent } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 
 // Using TDD, write a react component with a button that displays a number, starting with 0.
 // The number should increase by 1 every time you click the button.
@@ -8,7 +9,7 @@ import { render, screen, fireEvent } from "@testing-library/react";
 describe("Button component", () => {
   const simulateButtonClick = (timesToRun) => {
     while (timesToRun-- > 0 && timesToRun <= 3) {
-      fireEvent.click(screen.getByTestId("button"));
+      userEvent.click(screen.getByTestId("button"));
     }
     return;
   };

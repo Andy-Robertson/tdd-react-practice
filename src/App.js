@@ -4,7 +4,7 @@ import Button from "./Components/Button";
 function App() {
   return (
     <div className="App">
-      <header className="App-header">I wouldnt do that!</header>
+      <header className="App-header">PRESS AT YOUR OWN RISK!!!</header>
 
       <main className="App-main">
         <Button />
