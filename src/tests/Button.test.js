@@ -33,4 +33,14 @@ describe("Button component", () => {
 
     expect(Number(buttonId.innerHTML)).toBe(1);
   });
+
+    it("displays a count equal to 2 after the button has been clicked twice", () => {
+      render(<Button />);
+      const buttonId = screen.getByTestId("button");
+
+      fireEvent.click(buttonId);
+      fireEvent.click(buttonId);
+
+      expect(Number(buttonId.innerHTML)).toBe(2);
+    });
 });
