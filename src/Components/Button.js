@@ -4,11 +4,14 @@ const Button = () => {
   const [count, setCount] = useState(0);
 
   const countClickHandler = () => {
-    if (count === 3) {
-      setCount(0);
-    } else {
-      setCount((count) => count + 1);
-    }
+    setCount((count) => {
+      return (count + 1) % 4;
+      // if (count === 3) {
+      //   return 0;
+      // } else {
+      //   return count + 1;
+      // }
+    });
   };
 
   return (
