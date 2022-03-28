@@ -1,5 +1,6 @@
 import "./App.css";
 import Button from "./Components/Button";
+import Form from "./Components/Form";
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
 
       <main className="App-main">
         <Button />
+        <Form />
       </main>
 
       <footer></footer>
