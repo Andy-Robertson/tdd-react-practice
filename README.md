@@ -1,6 +1,6 @@
-### Getting Started with Create React App
+### A playground for Test Driven Development (TDD)
 
-A playground for Test Driven Development (TDD) using,
+Practice TDD using,
 
 - Jest
 - Testing Library
