@@ -10,4 +10,29 @@ describe("Form component", () => {
 
     expect(form).toBeInTheDocument();
   });
+
+  it("has a form element label rendered with the text `name`", () => {
+    render(<Form />);
+
+    const loginLabel = screen.getByLabelText(/name/i);
+
+    expect(loginLabel).toBeInTheDocument();
+  });
+
+  it("has a form element label rendered with the text `email`", () => {
+    render(<Form />);
+
+    const emailLabel = screen.getByLabelText(/email/i);
+
+    expect(emailLabel).toBeInTheDocument();
+  });
+
+  it("has a button rendered with `Submit` text", () => {
+    render(<Form />);
+
+    const submitButton = screen.getByRole("button");
+    console.log(submitButton.textContent);
+    expect(submitButton).toBeInTheDocument();
+    expect(submitButton.textContent).toBe("Submit");
+  });
 });
