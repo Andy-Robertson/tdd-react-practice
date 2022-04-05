@@ -30,9 +30,18 @@ describe("Form component", () => {
   it("has a button rendered with `Submit` text", () => {
     render(<Form />);
 
-    const submitButton = screen.getByRole("button");
-    console.log(submitButton.textContent);
+    const submitButton = screen.getByRole("button", { name: /Submit/i });
     expect(submitButton).toBeInTheDocument();
-    expect(submitButton.textContent).toBe("Submit");
+    // expect(submitButton.textContent).toBe("Submit");
   });
+
+  const onSubmitHandler = jest.fn();
+
+  it("onSubmit is called", () => {
+    render(<Form onSubmit={onSubmitHandler} />);
+
+    userEvent.click(screen.getByRole("button", { name: /Submit/i }));
+    expect(onSubmitHandler).toHaveBeenCalled();
+  });
+
 });
